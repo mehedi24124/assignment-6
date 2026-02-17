@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commarce Application Desing</title>
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind & daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!--CSS folder link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--1) Navbar-->
+    <header>
+      <div
+        class="navbar bg-base-100 shadow-sm flex items-center justify-between md:px-40"
+      >
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>Products</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl"
+            ><span class="text-2xl text-blue-800">SwiftCart</span></a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <a><span class="font-bold text-blue-800">Home</span></a>
+            </li>
+            <li><a>Products</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2) Banner / Hero Section-->
+    <section class="relative bg-[url('Assets/bn.png')] bg-cover bg-center h-96">
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <div class="relative py-30 px-20 text-white md:px-40 md:w-8/12">
+        <h1 class="font-bold text-4xl mb-2">Best Collection For You</h1>
+        <p class="mb-4">
+          Discover the latest trends in fasino,desing and shop.Shop with
+          confidence and style at SwiftCart.
+        </p>
+        <button class="btn btn-primary">Shop Now</button>
+      </div>
+    </section>
+
+    <!--  3) Features / Why Choose Us-->
+    <section>
+      <!-- Section heading -->
+      <div class="text-center mt-8 md:mt-10">
+        <h1 class="font-bold text-2xl">Why Choose Us</h1>
+        <p class="mt-2">
+          We provide the best shopping experience with top-notch service.
+        </p>
+      </div>
+
+      <!-- Cards container -->
+      <div
+        class="flex flex-col md:flex-row flex-wrap justify-center items-start gap-6 mt-6 px-4 md:px-0"
+      >
+        <!-- Card 1 -->
+        <div
+          class="relative bg-slate-100 w-full sm:w-80 md:w-60 p-4 rounded shadow-md"
+        >
+          <div class="absolute -top-4 left-4 text-blue-800 text-2xl">
+            <i class="fa-solid fa-truck shadow-lg"></i>
+          </div>
+          <div class="mt-8">
+            <h5 class="font-bold mb-2">Fast Delivery</h5>
+            <p>
+              Get your orders delivered to your doorstep quickly and
+              efficiently.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="relative bg-slate-100 w-full sm:w-80 md:w-60 p-4 rounded shadow-md"
+        >
+          <div class="absolute -top-4 left-4 text-blue-800 text-2xl">
+            <i class="fa-solid fa-headphones"></i>
+          </div>
+          <div class="mt-8">
+            <h5 class="font-bold mb-2">24/7 Support</h5>
+            <p>Our support team is available around the clock to assist you.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="relative bg-slate-100 w-full sm:w-80 md:w-60 p-4 rounded shadow-md"
+        >
+          <div class="absolute -top-4 left-4 text-blue-800 text-2xl">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="mt-8">
+            <h5 class="font-bold mb-2">Secure Payment</h5>
+            <p>
+              Experience safe and secure transactions with our encrypted payment
+              systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="relative bg-slate-100 w-full sm:w-80 md:w-60 p-4 rounded shadow-md"
+        >
+          <div class="absolute -top-4 left-4 text-blue-800 text-2xl">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <div class="mt-8">
+            <h5 class="font-bold mb-2">Easy Returns</h5>
+            <p>Not satisfied? Return your products easily within 30 days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) Trending / Top Rated Section -->
+    <section class="mt-10">
+      <div class="text-center mb-6">
+        <h1 class="font-bold text-2xl">Trending Now</h1>
+      </div>
+
+      <!-- Card container -->
+      <div
+        class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 px-4"
+      >
+        <!-- card-1 -->
+        <div class="card bg-base-100 w-full sm:w-80 lg:w-96 shadow-sm">
+          <figure>
+            <img src="Assets/pic.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div class="rating justify-end">
+              <!-- rating stars -->
+            </div>
+            <h2 class="card-title">Backpack Bag.Foldsbak No.1</h2>
+            <p class="font-bold">$200.75</p>
+            <div class="card-actions justify-between">
+              <button class="btn btn-sm">
+                <i class="fa-solid fa-eye"></i> Details
+              </button>
+              <button class="btn btn-sm bg-blue-400">
+                <i class="fa-solid fa-cart-shopping"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-2 -->
+        <div class="card bg-base-100 w-full sm:w-80 lg:w-96 shadow-sm">
+          <figure>
+            <img src="Assets/2pic.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div class="rating justify-end">
+              <!-- rating stars -->
+            </div>
+            <h2 class="card-title">Man's Casual premium t-Shirt</h2>
+            <p class="font-bold">$120.75</p>
+            <div class="card-actions justify-between">
+              <button class="btn btn-sm">
+                <i class="fa-solid fa-eye"></i> Details
+              </button>
+              <button class="btn btn-sm bg-blue-400">
+                <i class="fa-solid fa-cart-shopping"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-3 -->
+        <div class="card bg-base-100 w-full sm:w-80 lg:w-96 shadow-sm">
+          <figure>
+            <img src="Assets/3pic.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div class="rating justify-end">
+              <!-- rating stars -->
+            </div>
+            <h2 class="card-title">Man's cotton Jacket</h2>
+            <p class="font-bold">$430.75</p>
+            <div class="card-actions justify-between">
+              <button class="btn btn-sm">
+                <i class="fa-solid fa-eye"></i> Details
+              </button>
+              <button class="btn btn-sm bg-blue-400">
+                <i class="fa-solid fa-cart-shopping"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Newsletter & Footer-->
+    <footer
+      class="footer sm:footer-horizontal bg-blue-100 text-base-content p-10"
+    >
+      <aside>
+        <p class="text-xl font-bold text-blue-800">SwiftCart</p>
+        <p>
+          Your one-stop shop for all your fashion and lifestyle <br />
+          needs. Quality products,fast delevery and excellent support.
+        </p>
+      </aside>
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+      <form>
+        <h6 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h6>
+        <P>The latest news,article and resources sent <br> to your inbox weekly.</P>
+        <fieldset class="w-80">
+          <label>Enter your email address</label>
+          <div class="join">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item"
+            />
+          </div>
+        </fieldset>
+        <button class="btn btn-primary join-item">Subscribe</button>
+      </form>
+    </footer>
+  </body>
+</html>
